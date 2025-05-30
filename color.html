@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Color App by Ritika Jaiswal</title>
+		<style>
+			*{text-align:center;font-size:50px;}
+			.btn{width:20%; border-radius:10px; }
+			.btn:hover{color:purple;background-color:azure;}
+		</style>
+	</head>
+	<body>
+		<h1>Color Me App</h1>
+		<form onsubmit="show()">
+			<input type="submit" value="Red" class="btn"/>
+			<input type="submit" value="Green" class="btn"/>
+			<input type="submit" value="Blue" class="btn"/>
+		</form>
+		<script>
+			function show()
+			{
+				event.preventDefault();
+				let action=document.activeElement.value;
+
+				if(action === "Red")
+					document.body.style.backgroundColor="red";
+
+				else if(action === "Green")
+					document.body.style.backgroundColor="green";
+
+				else
+					document.body.style.backgroundColor="blue";
+			}
+		</script>
+	</body>
+</html>
